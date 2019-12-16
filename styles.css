@@ -1,0 +1,197 @@
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%) ;
+  --gray-blue: hsl(246, 25%, 77%);
+  --gray-light: #dedede;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  color: var(--red);
+  font-weight: 600;
+}
+
+button {
+  font-size: 16px;
+  color: white;
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+
+.container {
+  background-image: url(images/bg-intro-mobile.png);
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--red);
+
+  text-align: center;
+  padding: 100px 30px;
+}
+
+
+/* -----------MAIN SECTION---------- */
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 1em;
+}
+
+.main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.main__text {
+  margin-bottom: 3em;
+}
+
+
+.main__button {
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  margin-bottom: 2em;
+  padding: 1.25em 3em;
+  box-shadow: 0 7px 0 rgba(0, 0, 0, 0.15);
+  line-height: 1.6;
+}
+
+.main__button span {
+  font-weight: 700;
+}
+
+
+
+/* ---------FORM SECTION------------ */
+
+.side {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 5em;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 1.5em;
+  border-radius: 5px;
+  border: 1px solid var(--gray-light);
+
+}
+
+input::placeholder {
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 1em;
+
+}
+
+.form__button {
+  background: var(--green);
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 1.25em;
+  margin-bottom: 1em;
+  border: inset 2px solid rgb(73, 174, 132);
+  box-shadow: 0 4px 0 rgba(73, 174, 132, 0.8);
+}
+
+.form-terms {
+  color: var(--gray-blue);
+  font-size: 12px;
+  padding: 0 1em;
+}
+
+
+
+
+/* Footer ------- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 50px auto 20px;
+}
+
+
+
+
+
+/* Large Screen Layout ---------------------- */
+@media (min-width: 780px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 500px));
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/bg-intro-desktop.png);
+    padding: 100px 50px 200px;
+  }
+
+
+  .main {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+
+}
+
+/* Form errors ------------ */
+
+label {
+  color: var(--red);
+  font-size: 11px;
+  font-style: italic;
+  text-align: right;
+  position: absolute;
+  top: 55px;
+  right: 5px;
+  display: none;
+}
+
+.form__field {
+  position: relative;
+}
+
+.error input {
+  background: url(images/icon-error.svg) no-repeat right 10px center;
+  border: solid 2px var(--red);
+  margin-bottom: 4em;
+}
+
+.error label {
+  display: block;
+}
+
